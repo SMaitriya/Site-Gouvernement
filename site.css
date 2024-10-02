@@ -6,49 +6,100 @@ header {
 }
 
 
-nav {
-    margin: 0 auto; /* Pour centrer le bloc nav (menu) */
-}
+/* Menu */
 
 nav ul {
-    display: flex; /* Utilisez flex pour aligner les éléments horizontalement */
-    padding: 0; /* Supprime le rembourrage par défaut */
-    list-style-type: none; /* Supprime les puces des listes */
+    display: flex; 
+    padding: 0; 
+    list-style-type: none;
 }
 
 nav li {
-    border: solid 1px blue;
-    box-shadow: 3px;
-    background-color: white;
-    flex: 1;
-    height: 2em;
+    border: solid 1px rgb(228, 228, 240);
+    background-color: rgb(237, 63, 63);
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    height: 1.5em;
     text-align: center;
+    width: 100%;
+  
 }
 
-nav ul > li > a {
+nav li:hover {
+    background-color: rgb(195, 106, 106);
+}
+
+nav > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+nav li ul>li:hover {
+    background-color: rgb(139, 147, 232);
+}
+
+nav > ul > li > a {
+
     color: rgb(43, 43, 236);
     text-decoration: none;
-    height: 100%; /* Stabilise les hauteurs des liens */
+    height: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
 }
 
 nav ul > li > ul {
     display: none;
-    flex-direction: column; /* Aligne les éléments en colonne */
+    flex-direction: column;
+    margin-top: 10px;
+
+    
 
 }
 
 nav ul > li > ul > li {
-    padding: 0.5em;
-    background-color: rgb(225, 224, 224);
+ 
+    background-color: rgb(225, 229, 247);
     border: none;
     z-index: 1;
+    flex: auto;
+    padding-right: 0;
+    padding-left: 0;
+
+
+}
+
+nav ul > li > ul > li > a {
+
+    display: flex;
+    justify-content: flex-start; 
+    padding-left: 10px; 
+    text-align: left; 
+    text-decoration: none;
 
 }
 
 nav ul > li:hover > ul {
     display: flex;
+    justify-content: flex-start;
+}
+
+/* accueil */ 
+
+.accueil {
+    list-style: none;
+    display: flex;
+    margin-top: 2em;
+    padding-left: 0;
+    font-size: 0.8em;
+    color: rgb(86, 86, 120);
+   
+}
+
+.accueil a {
+    text-decoration: none;
+    font-weight: bold;
+      color: rgb(86, 86, 120);
+
 }
 
