@@ -1,0 +1,54 @@
+header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+nav {
+    margin: 0 auto; /* Pour centrer le bloc nav (menu) */
+}
+
+nav ul {
+    display: flex; /* Utilisez flex pour aligner les éléments horizontalement */
+    padding: 0; /* Supprime le rembourrage par défaut */
+    list-style-type: none; /* Supprime les puces des listes */
+}
+
+nav li {
+    border: solid 1px blue;
+    box-shadow: 3px;
+    background-color: white;
+    flex: 1;
+    height: 2em;
+    text-align: center;
+}
+
+nav ul > li > a {
+    color: rgb(43, 43, 236);
+    text-decoration: none;
+    height: 100%; /* Stabilise les hauteurs des liens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul > li > ul {
+    display: none;
+    flex-direction: column; /* Aligne les éléments en colonne */
+
+}
+
+nav ul > li > ul > li {
+    padding: 0.5em;
+    background-color: rgb(225, 224, 224);
+    border: none;
+    z-index: 1;
+
+}
+
+nav ul > li:hover > ul {
+    display: flex;
+}
+
