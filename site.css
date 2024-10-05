@@ -1,89 +1,165 @@
-.container {
-    margin: 3em;
+@media (max-width: 750px) {
+
+    .logo {
+      max-width: 100%; /* Rendre l'image responsive */
+ 
+    }
+
+    #recherche_conteneur {
+        width: 100%;
+        margin-top: 20px;
+    
+    }
+    
+    #rechercheInput {
+        width: 89%; 
+        padding: 0.2em;
+    }
+    
+    #ok_recherche {
+        width: 10%;
+
+    }
+    
+
+    header {
+    flex-wrap: wrap; /* Pour permettre le wrap quand il manque d'espace */
+    flex-direction: row;
+
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+    }
+
+    nav>ul>li {
+        padding-bottom: 50px;
+
+    }
+
+    nav li {
+        border-bottom: #005AA7 10px solid;
+
+        
+    }
+
+    nav>ul>li>ul>li {
+        padding: 25px;
+
+    }
+
+    nav>ul>li:hover {
+        margin-bottom: 9em;
+        /* lors de la vue mobile, bien voir le menu même lors de la selection */
+    }
+
+    .accueil {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3em;
+    }
+
+    .accueil a, .accueil li {
+        font-size: 20px;
+        
+    }
+
+
 }
 
+
+.container {
+    margin: 0 3em 3em;
+ 
+}
+
+
+
+/* reglage du probleme du margin entre le header et la nav*/
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* image + barre de recherche en flex */
 header {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 10px;
+    margin-bottom: 0;
+    background-color: transparent;
+    box-shadow: inset 0 10px 100px rgba(218, 239, 249, 0.982);
 }
 
-
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-    nav li {
-        width: 100%; /* Les items du menu prennent toute la largeur */
-    }
-}
 /* Menu */
 
 nav {
     margin-bottom: 3em;
+    /* margin entre nav et accueil */
 }
 
 nav ul {
-   
-    display: flex; 
-    padding: 0; 
+
+    display: flex;
+    padding: 0;
     list-style-type: none;
-  
+    
+
 }
 
 nav li {
-  
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+
     height: 1.5em;
-    text-align: center;
     width: 100%;
-   
-  
+
+    
+
+
 }
 
-
-nav > ul > li > a:hover {
+nav>ul>li>a:hover {
     text-decoration: underline;
+    color: #91c9fa;
 }
 
 nav li ul>li:hover {
-    background-color: rgb(139, 147, 232);
+    background-color: rgb(110, 187, 232);
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
 
-    color: rgb(43, 43, 236);
+    color: rgb(56, 128, 243);
     text-decoration: none;
-    height: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1em;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-right: 1px;
     padding: 1em;
-    background-color: rgb(254, 254, 255); /* Fond blanc pour le menu */
-    border-bottom: 3px solid rgb(0, 71, 122); /* Bordure bleu-gris */
-    box-shadow: 
-    inset 0 5px 10px rgba(200, 200, 200, 2), /* Ombre en bas d'une couleur différente */
-    inset 0 -5px 10px rgba(201, 202, 229, 10); /* Ombre qui vient du bas vers le haut */
+    background: linear-gradient(to bottom, #d9e1e7df, #ffffff 50%, #c2d3e0);
+    border-bottom: 2px solid #005AA7;
+    box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile à l'intérieur en haut */
 
-
-    
 }
 
-nav ul > li > ul {
+/* ul enfant */
+nav ul>li>ul {
     display: none;
     flex-direction: column;
-    margin-top: 3px;
+    margin-top: 2px;
+    
+
 }
 
-nav ul > li > ul > li {
- 
-    background-color: rgb(225, 229, 247);
+/* li enfant*/
+
+nav ul>li>ul>li {
+    
+    
+    background: #eef4ff;
     border: none;
     z-index: 1;
     flex: auto;
@@ -93,37 +169,36 @@ nav ul > li > ul > li {
 
 }
 
-nav ul > li > ul > li > a {
+nav ul>li>ul>li>a {
 
-    display: flex;
-    justify-content: flex-start; 
-    padding-left: 10px; 
-    text-align: left; 
+    justify-content: flex-start; /* mettre l'enfant li à gauche de son contenaire"*/
+    padding-left: 10px;
     text-decoration: none;
 
 }
 
-nav ul > li:hover > ul {
-    display: flex;
-    justify-content: flex-start;
+nav ul>li:hover>ul {
+    display: flex; /* faire apparaitre les sous listes*/
 }
 
-/* accueil */ 
+/* accueil */
 
 .accueil {
+    
     list-style: none;
     display: flex;
-    margin-top: 2em;
     padding-left: 0;
     font-size: 0.8em;
-    color: rgb(86, 86, 120);
-   
+    color: rgb(81, 81, 173);
+
 }
 
 .accueil a {
     text-decoration: none;
     font-weight: bold;
-      color: rgb(86, 86, 120);
+    color: rgb(90, 90, 224);
 
 }
+
+/* Tableau de bord */
 
