@@ -1,37 +1,41 @@
+/* header et nav en flex */
+
 @media (max-width: 750px) {
 
     .logo {
-      max-width: 100%; /* Rendre l'image responsive */
- 
+        max-width: 100%;
+        /* Rendre l'image responsive */
+
     }
 
     #recherche_conteneur {
         width: 100%;
         margin-top: 20px;
-    
+
     }
-    
+
     #rechercheInput {
-        width: 89%; 
+        width: 89%;
         padding: 0.2em;
     }
-    
+
     #ok_recherche {
         width: 10%;
 
     }
-    
+
 
     header {
-    flex-wrap: wrap; /* Pour permettre le wrap quand il manque d'espace */
-    flex-direction: row;
+        flex-wrap: wrap;
+        /* Pour permettre le wrap quand il manque d'espace */
+        flex-direction: row;
 
     }
 
     nav ul {
         flex-wrap: wrap;
         flex-direction: column;
-        
+
     }
 
     nav>ul>li {
@@ -42,7 +46,7 @@
     nav li {
         border-bottom: #005AA7 10px solid;
 
-        
+
     }
 
     nav>ul>li>ul>li {
@@ -61,9 +65,10 @@
         margin-bottom: 3em;
     }
 
-    .accueil a, .accueil li {
+    .accueil a,
+    .accueil li {
         font-size: 20px;
-        
+
     }
 
 
@@ -72,13 +77,14 @@
 
 .container {
     margin: 0 3em 3em;
- 
+
 }
 
 
 
 /* reglage du probleme du margin entre le header et la nav*/
-ul, li {
+ul,
+li {
     margin: 0;
     padding: 0;
 }
@@ -106,17 +112,12 @@ nav ul {
     display: flex;
     padding: 0;
     list-style-type: none;
-    
-
 }
 
 nav li {
 
     height: 1.5em;
     width: 100%;
-
-    
-
 
 }
 
@@ -141,7 +142,8 @@ nav>ul>li>a {
     padding: 1em;
     background: linear-gradient(to bottom, #d9e1e7df, #ffffff 50%, #c2d3e0);
     border-bottom: 2px solid #005AA7;
-    box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile à l'intérieur en haut */
+    box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.1);
+    /* Ombre subtile à l'intérieur en haut */
 
 }
 
@@ -150,15 +152,15 @@ nav ul>li>ul {
     display: none;
     flex-direction: column;
     margin-top: 2px;
-    
+
 
 }
 
 /* li enfant*/
 
 nav ul>li>ul>li {
-    
-    
+
+
     background: #eef4ff;
     border: none;
     z-index: 1;
@@ -171,25 +173,28 @@ nav ul>li>ul>li {
 
 nav ul>li>ul>li>a {
 
-    justify-content: flex-start; /* mettre l'enfant li à gauche de son contenaire"*/
+    justify-content: flex-start;
+    /* mettre l'enfant li à gauche de son contenaire"*/
     padding-left: 10px;
     text-decoration: none;
 
 }
 
 nav ul>li:hover>ul {
-    display: flex; /* faire apparaitre les sous listes*/
+    display: flex;
+    /* faire apparaitre les sous listes*/
 }
 
 /* accueil */
 
 .accueil {
-    
+
     list-style: none;
     display: flex;
     padding-left: 0;
     font-size: 0.8em;
     color: rgb(81, 81, 173);
+    margin-bottom: 2em;
 
 }
 
@@ -200,5 +205,224 @@ nav ul>li:hover>ul {
 
 }
 
-/* Tableau de bord */
 
+/* section en grid */
+
+section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 10px;
+}
+
+
+/* Tableau de bord en grid */
+
+
+main {
+    margin-top: -0.8px;
+}
+
+main h1 {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    background-color: #005AA7;
+    color: #eef4ff;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 20px 0 20px 60px;
+}
+
+
+.intro {
+    background-color: #fffffff9;
+    font-size: 1.2em;
+    color: #005AA7;
+    text-align: start;
+    font-weight: bold;
+    grid-column: 1 / -1;
+    /* Prendre toute la largeur de la grille */
+    padding-bottom: 0.5em;
+}
+
+.grid-container {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/* Trois colonnes */
+    background: #eef4ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+
+
+}
+
+/* intérieur de chaque bloc grid , on fait des flex */
+.grid-container>div {
+    padding: 20px 0 20px 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.grid-container>div img {
+    margin-right: 15px;
+}
+
+.grid-container>div a {
+
+    font-weight: bold;
+    text-decoration: none;
+    color: #256196;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.grid-container>div ul {
+    list-style: none;
+    margin-top: 10px;
+    max-width: 80%;
+}
+
+/* aside grid*/
+
+
+aside ul {
+    list-style: none;
+}
+
+/* astuces */
+
+.astuces {
+    background: #eef4ff;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.astuces ul {
+    padding: 2em 2em 0.4em 1em;
+
+}
+
+.astuces ul a {
+    color: black
+        /* texte lien "les astuces" */
+}
+
+
+.astuces div a {
+
+    color: #005AA7;
+    /* "toutes les astuces"*/
+    font-weight: bold;
+
+
+}
+
+.astuces div {
+
+    text-align: right;
+    padding: 1em;
+}
+
+.astuces h3 {
+    color: white;
+    padding: 0.5em;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #005AA7;
+    color: #eef4ff;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 20px 0 20px 60px;
+    width: 100%;
+
+}
+
+/* actualite */
+
+.actualite {
+    background: #eef4ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.actualite h3 {
+    color: white;
+    padding: 0.5em;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #c73c3c;
+    color: #eef4ff;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 20px 0 20px 60px;
+    width: 100%;
+}
+
+.actualite ul {
+    padding: 2em 2em 1em 0.8em;
+}
+
+.actualite ul a {
+    color: black;
+}
+
+
+.date {
+    color: #c73c3c;
+    font-weight: bold;
+}
+
+.actualite div a {
+    color: #c73c3c;
+    font-weight: bold;
+}
+
+.actualite div {
+    text-align: right;
+    padding: 1em;
+}
+
+
+
+@media (max-width: 768px) {
+
+    section {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        padding: 10px; 
+    }
+
+    main h1 {
+        justify-content: center; 
+        padding: 0; 
+        margin-bottom: 1em;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Une seule colonne pour la grille */
+    }
+
+    .grid-container > div {
+        align-items: center; 
+    }
+
+    .astuces, .actualite {
+        margin-bottom: 1em; 
+        text-align: center;
+    }
+
+    .astuces h3, .actualite h3 {
+        justify-content: center; /* Centrer les titres */
+        padding: 0; 
+        margin: 0;
+    }
+
+ 
+}
