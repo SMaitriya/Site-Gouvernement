@@ -5,8 +5,6 @@
 	<title>Devoir à la maison</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-
 	<link rel="stylesheet" href="site.css">
 
 </head>
@@ -119,51 +117,89 @@
 			</aside>
 		</section>
 
-		<footer>
-			<div>
-				<ul>
-					<li>
-						<span><a href="http://www.ojd-internet.com/chiffres-internet/7111-service-public.fr" target="_blank"><img src="images\logo-ojd.png" alt="logo du OJD"></a></span>
-					</li>
-					<li>
-						<p>Assistance et contact</p>
-						<ul>
-							<li><a href="jsp/authent/plan_du_site.jsp" target="_self" ><span title="">Plan du site</span></a></li>
-							<li><a href="jsp/authent/contact.jsp" target="_self"><span title="">Contact</span></a></li>
-							<li><a href="jsp/authent/aide.jsp" target="_self"><span title="">Aide</span></a></li>
-							<li><a href="jsp/authent/faqs.jsp" target="_self" ><span title="">Questions fréquentes</span></a></li>
+		<!-- FOoter-->
+
+		<footer class="text-white mt-5"> 
+			<div class="container-footer">
+				<div class="row"> 
+					<div class="col-md-1 d-flex justify-content-center align-items-center"> <!-- Flexbox pour centrer -->
+						<ul class="list-unstyled">
+							<li>
+								<span>
+									<a href="http://www.ojd-internet.com/chiffres-internet/7111-service-public.fr" target="_blank">
+										<img src="images/logo-ojd.png" alt="logo du OJD" style="height: 100px; width:100%"> <!-- image -->
+									</a>
+								</span>
+							</li>
 						</ul>
-					</li>
-					<li>
-						<p>Informations légales</p>
-						<ul>
-							<li><a href="jsp/authent/mentions_legales.jsp"><span title="">Mentions légales</span></a></li>
-							<li><a href="jsp/authent/conditions_generales_utilisation.jsp" target="_self"><span title="">Conditions générales d'utilisation</span></a></li>
-							<li><a href="http://www.service-public.fr/%C3%A0-propos-du-site/001371.html" target="_blank"><span title="Répertoire des informations publiques - Nouvelle fenêtre">Répertoire des informations publiques</span></a></li>
+					</div>
+				
+					<!-- 2ème colonne -->
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>
+								<p>Assistance et contact</p>
+								<ul>
+									<li><a href="jsp/authent/plan_du_site.jsp" target="_self"><span title="">Plan du site</span></a></li>
+									<li><a href="jsp/authent/contact.jsp" target="_self"><span title="">Contact</span></a></li>
+									<li><a href="jsp/authent/aide.jsp" target="_self"><span title="">Aide</span></a></li>
+									<li><a href="jsp/authent/faqs.jsp" target="_self"><span title="">Questions fréquentes</span></a></li>
+								</ul>
+							</li>
 						</ul>
-					</li>
-					<li>
-						<p>Qualité de service</p>
-						<ul>
-							<li><a href="jsp/authent/accessibilite.jsp"><span title="">Accessibilité</span></a></li>
-							<li><a href="jsp/authent/securite.jsp" ><span title="">Sécurité</span></a></li>
-							<li><a href="jsp/authent/engagement_qualite.jsp"><span title="">Engagement qualité</span></a></li>
-							<li><a href="jsp/authent/statistiques.jsp" ><span title="">Statistiques</span></a></li>
+					</div>
+				
+					<!-- 3ème colonne -->
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>
+								<p>Informations légales</p>
+								<ul>
+									<li><a href="jsp/authent/mentions_legales.jsp"><span title="">Mentions légales</span></a></li>
+									<li><a href="jsp/authent/conditions_generales_utilisation.jsp" target="_self"><span title="">Conditions générales d'utilisation</span></a></li>
+									<li><a href="http://www.service-public.fr/%C3%A0-propos-du-site/001371.html" target="_blank"><span title="Répertoire des informations publiques - Nouvelle fenêtre">Répertoire des informations publiques</span></a></li>
+								</ul>
+							</li>
 						</ul>
-					</li>
-					<li>
-						<p>Partenariat</p>
-						<ul>
-							<li><a href="jsp/authent/partenaires.jsp"><span title="">Nos organismes partenaires</span></a></li>
-							<li><a href="jsp/authent/devenir_partenaire.jsp"><span title="">Devenir partenaire ?</span></a></li>
+					</div>
+				
+					<!-- 4ème colonne -->
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>
+								<p>Qualité de service</p>
+								<ul>
+									<li><a href="jsp/authent/accessibilite.jsp"><span title="">Accessibilité</span></a></li>
+									<li><a href="jsp/authent/securite.jsp"><span title="">Sécurité</span></a></li>
+									<li><a href="jsp/authent/engagement_qualite.jsp"><span title="">Engagement qualité</span></a></li>
+									<li><a href="jsp/authent/statistiques.jsp"><span title="">Statistiques</span></a></li>
+								</ul>
+							</li>
 						</ul>
-					</li>
-				</ul>
-			</div>
-			<div>
-				<a target="_blank" href="jsp/authent/a_propos_de_la_DGME.jsp">Tous droits réservés - Direction Générale de Modernisation de l'Etat - 2012 </a> | <a title="A propos du site" href="jsp/authent/a_propos_du_site.jsp">A propos de mon.service-public.fr</a>
+					</div>
+				
+					<!-- 5ème colonne -->
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>
+								<p>Partenariat</p>
+								<ul>
+									<li><a href="jsp/authent/partenaires.jsp"><span title="">Nos organismes partenaires</span></a></li>
+									<li><a href="jsp/authent/devenir_partenaire.jsp"><span title="">Devenir partenaire ?</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="footer-links"> <!-- ajout class -->
+					<a target="_blank" href="jsp/authent/a_propos_de_la_DGME.jsp">Tous droits réservés - Direction Générale de Modernisation de l'Etat - 2012 </a> | 
+					<a title="A propos du site" href="jsp/authent/a_propos_du_site.jsp">A propos de mon.service-public.fr</a>
+				</div>
 			</div>
 		</footer>
+		
+		
 	</div>
 </body>
 </html>
