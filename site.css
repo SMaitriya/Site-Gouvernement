@@ -159,7 +159,6 @@ nav ul>li>ul>li {
     background: #eef4ff;
     border: none;
     z-index: 1;
-    flex: auto;
     padding-right: 0;
     padding-left: 0;
 }
